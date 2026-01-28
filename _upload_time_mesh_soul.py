@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 
-"""
-Created on Mon Sep 15 14:32:15 2025
-
-@author: Alvaro.Romero
-"""
+""" @author: Alvaro.Romero """
+# Scripth para realizar cargue de malla en Soul (COS)
 
 #%% Imported libraries
 import os
@@ -20,15 +17,15 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-BASE_FOLDER = r"C:\Users\alvaro.romero\Documents\Proceso_Soul\Horarios"
+BASE_FOLDER = r"Ruta_Archivos"
 DOCUMENTS_PATH = BASE_FOLDER
-DRIVER_PATH = r"C:\Users\alvaro.romero\Documents\drivers\chromedriver.exe"
-LOGIN_LINK = "https://mysoul.groupcos.com/login"
-VAR_USER = "Aquinones98"
-VAR_PASSWORD = "Mafe031404-+"
+DRIVER_PATH = r"Ruta_Chromedriver"
+LOGIN_LINK = "ink_web"
+VAR_USER = "Usuario"
+VAR_PASSWORD = "Contraseña"
 MAX_THREADS = 1
 MAX_RETRIES = 3
-LOG_FOLDER = r"C:\Users\alvaro.romero\Documents\Proceso_Soul"
+LOG_FOLDER = r"Ruta-Archivos_Log"
 os.makedirs(LOG_FOLDER, exist_ok=True)
 
 def clean_path(path):
@@ -256,4 +253,5 @@ def main():
     print(f"📈 Tasa de éxito: {len(successful_groups)}/{total} ({tasa:.1f}%)")
 
 if __name__ == "__main__":
+
     main()
